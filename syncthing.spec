@@ -1,5 +1,5 @@
 Name:		syncthing
-Version:	0.14.26
+Version:	0.14.41
 Release:	0%{?dist}
 Summary:	Open, trustworthy and decentralized sync
 # Set to amd64 or 386
@@ -42,6 +42,8 @@ cp etc/linux-systemd/user/syncthing.service %{buildroot}/etc/systemd/user/
 /etc/systemd/user/syncthing.service
 
 %changelog
+* Thu Dec 14 2017 Benjamin Chambers <benjamin@egloo.ca>
+- Bump synthing version 0.14.26 -> 0.14.41
 * Mon Apr 03 2017 Benjamin Chambers <benjamin@egloo.ca>
 - Bump synthing version 0.14.13 -> 0.14.26
 * Wed Nov 30 2016 Benjamin Chambers <benjamin@egloo.ca>
