@@ -1,0 +1,19 @@
+sudo: required
+language: generic
+env:
+  global:
+  - DOCKER_IMAGE=montefuscolo/centos-rpmbuild
+services:
+- docker
+install: true
+script:
+- docker run --rm -v ${PWD}:/app -v /tmp/build:/root/rpmbuild/RPMS/x86_64 ${DOCKER_IMAGE}
+  run-rpmbuild -s /app/syncthing.spec
+deploy:
+  provider: releases
+  api_key:
+    secure: g1M/b3zbXyZ1G+XvRDTTHfOJ7GdAnMIbY4E/v9TEGSGujSFqeDA76q97z51AEHul+8eA+BvBfWHCbEWjXfCbyBmyK1olapKHsnTXXWVoEUN/IL8ObO+mO4bouSqdWhVs6+uw2ZI6SwDOqetmkpVHiwbFBZ/pjxPXnf/z2TpSqnfm3qpiGFvUhgIFI8EDeGqN4fL/1C2FW9z+tuoEatbYqbF/UcFQ8/s/kyW4j6ZMdG/c+9Q42pJaNl0MWqZAY95ZvvBIVUcWRpg8JEIMubOGllcu7y8Nf9haEinkl9fmihxiJo3p4rpUFi1O+Bnc5Yu0n2rpi4Cno2XWDu3pa7L2m7XkX9nLFvXojyf9Y0ArSW5C1ScsgwFKhl4MHMdWyTGwPsZOglZXXrRFFvZ5lkPDCDI6SbdGACy+sbnpp9XkCbWlyvtVsilymnkNbKJyWYSfkRmhA9RYb1e+ZkUqA1ASeVZjtV2ydczgMFE0bs4Dh29kK329Vdt7H7hbi4/fKEF+Lc3n/XbNwgY5jkkRVK440Fl0dncoQcoE4ok+o+ebXL+MjcylwkFoikGHVhhrYN6hkbjOSJXWsqest16xx+LLQtWwj36lvoDT1Pspm1AvIAymc4nTlN8lEi70HQKSJvZQJKPYFuPpwJ+IAxqDcQ9ClbnbXmMiYC3bv7fdyHhXYpI=
+  file_glob: true
+  file: "/tmp/build/*"
+  on:
+    branch: master
