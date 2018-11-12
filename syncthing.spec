@@ -43,19 +43,19 @@ cp etc/linux-systemd/user/syncthing.service %{buildroot}/etc/systemd/user/
 
 %changelog
 * Mon Oct 08 2018 Benjamin Chambers <benjamin@egloo.ca>
-- Bump synthing version 0.14.49 -> 0.14.51
+- Bump Syncthing version 0.14.49 -> 0.14.51
 * Sat Aug 04 2018 Serge Kishiko <s.kishiko@itotafrica.com>
-- Bump synthing version 0.14.47 -> 0.14.49
+- Bump Syncthing version 0.14.47 -> 0.14.49
 * Thu Dec 14 2017 Benjamin Chambers <benjamin@egloo.ca>
-- Bump synthing version 0.14.26 -> 0.14.41
+- Bump Syncthing version 0.14.26 -> 0.14.41
 * Mon Apr 03 2017 Benjamin Chambers <benjamin@egloo.ca>
-- Bump synthing version 0.14.13 -> 0.14.26
+- Bump Syncthing version 0.14.13 -> 0.14.26
 * Wed Nov 30 2016 Benjamin Chambers <benjamin@egloo.ca>
-- Bump synthing version 0.14.9 -> 0.14.13
+- Bump Syncthing version 0.14.9 -> 0.14.13
 * Mon Oct 24 2016 Benjamin Chambers <benjamin@egloo.ca>
-- Bump synthing version 0.13.1 -> 0.14.7
+- Bump Syncthing version 0.13.1 -> 0.14.7
 * Thu Sep 22 2016 Logan Owen <logan@s1network.com>
-- Bump synthing version 0.13.1 -> 0.14.7
+- Bump Syncthing version 0.13.1 -> 0.14.7
 
 * Mon Feb 08 2016 Martin Lazarov <martin@lazarov.bg>
 - Initial spec version
